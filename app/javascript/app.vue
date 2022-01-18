@@ -1,15 +1,23 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <v-app>
+      <p>{{ message }}</p>
+      <user/>
+    </v-app>
   </div>
 </template>
 
 <script>
+import user from "./packs/components/user.vue";
+
 export default {
   data: function () {
     return {
       message: "Hello Vue!"
     }
+  },
+  components: {
+    user: user
   }
 }
 </script>
